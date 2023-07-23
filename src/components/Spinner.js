@@ -9,3 +9,5 @@ export const Spinner = ({ text = '', size = '5em' }) => {
     </div>
   )
 }
+
+
