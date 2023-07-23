@@ -271,3 +271,25 @@ button.reaction-button {
 .notification.new {
   background-color: rgba(29, 161, 242, 0.1);
 }
+
+button.button-delete {
+  color: rgb(224, 158, 158);
+  background-color: #926bcf;
+  border-radius: 15px;
+}
+button.button-delete:hover {
+  color: red;
+  background-color: #1976d2;
+}
+Link.linkspase {
+  margin-left: 1rem;
+}
+nav a:first-of-type {
+  margin-left: 1.5rem;
+}
+.counterDiv {
+  margin-left: 10rem;
+}
+.counterButton {
+  margin-top: 5rem;
+}

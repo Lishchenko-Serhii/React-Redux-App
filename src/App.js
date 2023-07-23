@@ -8,6 +8,15 @@ import {
 
 import { Navbar } from './app/Navbar'
 
+import { PostsList } from './features/posts/postsList'
+import { AddPostForm } from './features/posts/addPostForm'
+import { SinglePostPage } from './features/posts/SinglePostPage'
+import { EditPostForm } from './features/posts/editPostForm'
+import { Counter } from './features/counter/Counter'
+import { UsersList } from './features/users/UsersList'
+import { UserPage } from './features/users/UserPage'
+import { NotificationsList } from './features/notifications/NotificationsList'
+
 function App() {
   return (
     <Router>
@@ -18,11 +27,21 @@ function App() {
             exact
             path="/"
             render={() => (
-              <section>
-                <h2>Welcome to the Redux Essentials example app!</h2>
-              </section>
+              <React.Fragment>
+                {/* <AddPostForm />
+                <PostsList /> */}
+                <h1> Это Home Page ,выберите синюю кнопку вверху</h1>
+              </React.Fragment>
             )}
           />
+          <Route exact path="/counter" component={Counter} />
+          <Route exact path="/postsList" component={PostsList} />
+          <Route exact path="/addPostForm" component={AddPostForm} />
+          <Route exact path="/posts/:postId" component={SinglePostPage} />
+          <Route exact path="/editPost/:postId " component={EditPostForm} />
+          <Route exact path="/users" component={UsersList} />
+          <Route exact path="/users/:userId" component={UserPage} />
+          <Route exact path="/notifications" component={NotificationsList} />
           <Redirect to="/" />
         </Switch>
       </div>
